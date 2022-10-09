@@ -116,6 +116,8 @@ GEM
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
+    flickr.rb (1.2.1)
+      xml-simple (>= 1.0.7)
     formatador (1.1.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -337,6 +339,8 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xml-simple (1.1.9)
+      rexml
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.1)
@@ -354,6 +358,7 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
+  flickr.rb
   guard
   guard-livereload
   guard-rspec

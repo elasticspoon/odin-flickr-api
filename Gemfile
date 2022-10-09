@@ -65,6 +65,7 @@ group :development do
 end
 
 gem "inline_svg"
+gem 'flickr.rb'
 
 group :development do
   gem "guard-rspec", require: false
