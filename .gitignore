@@ -38,3 +38,6 @@
 
 /node_modules
 /.vscode
+
+# Ignore application configuration
+/config/application.yml
