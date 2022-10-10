@@ -8,8 +8,8 @@ class FlickrAPI
   end
 
   def self.get_user_photos(user_id)
-    Flickr.photos.search(user_id:)
-  rescue Faraday::Error::TimeoutError => e
-    []
+    user_id && Flickr.photos.search(user_id:)
+  rescue NameError => _e
+    :user_not_found
   end
 end

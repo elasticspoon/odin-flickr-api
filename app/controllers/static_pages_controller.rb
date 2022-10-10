@@ -2,12 +2,13 @@ class StaticPagesController < ApplicationController
   before_action :search_photos
 
   def index
+    flash.now.alert = 'User not found.' if @photos == :user_not_found
   end
 
   private
 
   def search_params
-    params.permit(:user_id)
+    params.permit(:user_id).compact_blank
   end
 
   def search_photos

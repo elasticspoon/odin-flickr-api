@@ -1,8 +1,10 @@
+<div style="color: red;"><%= alert %></div>
 <h1>StaticPages#index</h1>
 <%= form_with url: static_pages_index_path, method: 'get' do |form| %>
   <%= form.label :user_id, 'search' %>
   <%= form.text_field :user_id, value: params[:user_id] %>
   <%= form.submit %>
 <% end %>
-<% @photos.inspect %>
-<%= render partial: 'photo', collection: @photos[..5] %>
+<% if @photos.is_a?(Array) %>
+  <%= render(partial: 'photo', collection: @photos[0..5]) || render('no_photos') %>
+<% end %>
