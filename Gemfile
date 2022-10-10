@@ -65,7 +65,7 @@ group :development do
 end
 
 gem 'figaro'
-gem 'flickr.rb'
+gem 'flickr-objects'
 gem 'inline_svg'
 
 group :development do

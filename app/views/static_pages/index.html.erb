@@ -1,2 +1,8 @@
 <h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<%= form_with url: static_pages_index_path, method: 'get' do |form| %>
+  <%= form.label :user_id, 'search' %>
+  <%= form.text_field :user_id, value: params[:user_id] %>
+  <%= form.submit %>
+<% end %>
+<% @photos.inspect %>
+<%= render partial: 'photo', collection: @photos[..5] %>
