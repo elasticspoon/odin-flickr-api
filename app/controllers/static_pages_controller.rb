@@ -2,7 +2,6 @@ class StaticPagesController < ApplicationController
   before_action :search_photos
 
   def index
-    flash.now.alert = 'User not found.' if @photos == :user_not_found
   end
 
   private
@@ -13,5 +12,6 @@ class StaticPagesController < ApplicationController
 
   def search_photos
     @photos = FlickrAPI.get_user_photos(search_params[:user_id])
+    flash.now.alert = 'User not found.' if @photos == :user_not_found
   end
 end
