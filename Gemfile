@@ -10,7 +10,7 @@ gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+# gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -22,13 +22,13 @@ gem 'jsbundling-rails'
 gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+# gem 'stimulus-rails'
 
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'jbuilder'
+# gem 'jbuilder'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -66,12 +66,11 @@ end
 
 gem 'figaro'
 gem 'flickr-objects'
-gem 'inline_svg'
+# gem 'inline_svg'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'bullet'
   gem 'guard'
   gem 'guard-livereload'
   gem 'guard-rspec', require: false
@@ -82,13 +81,10 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
   gem 'webdrivers'
 end
 
 group :development, :test do
-  gem 'factory_bot_rails'
-  gem 'faker'
   gem 'rails-controller-testing'
   gem 'reek'
   gem 'rubocop-rails'
