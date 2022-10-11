@@ -1,3 +1,11 @@
 /* Entry point for your PostCSS build */
 @import "globals.postcss";
 @import "index_page.postcss";
+/* @import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css"; */
+@import "open-props/src/index.css";
+
+/* optional imports that use the props */
+@import "open-props/src/extra/normalize.css";
+@import "open-props/src/extra/buttons.css";
