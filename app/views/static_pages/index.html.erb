@@ -1,10 +1,11 @@
-<div style="color: red;"><%= alert %></div>
-<h1>StaticPages#index</h1>
-<%= form_with url: static_pages_index_path, method: 'get' do |form| %>
-  <%= form.label :user_id, 'search' %>
-  <%= form.text_field :user_id, value: params[:user_id] %>
-  <%= form.submit %>
+<%= (content_tag(:div, alert, class: 'alert') ) if alert   %>
+<%= form_with url: static_pages_index_path, method: 'get', class: 'search-form' do |form| %>
+  <h2 class="search-form__header"><%= form.label :user_id, 'Enter a valid user_id to search a user\'s pictures!' %></h2>
+  <%= form.text_field :user_id, value: params[:user_id], class: 'search-form__text-field' %>
+  <%= form.submit 'Search', class: 'search-form__button' %>
 <% end %>
 <% if @photos.is_a?(Array) %>
-  <%= render(partial: 'photo', collection: @photos[0..5]) || render('no_photos') %>
+  <div class="image-list">
+    <%= render(partial: 'photo', collection: @photos[0..5]) || render('no_photos') %>
+  </div>
 <% end %>

@@ -1,2 +1,4 @@
-<%= image_tag photo_url(photo) %>
-<%= photo.title %>
+<div class="image">
+  <div class="image__photo"><%= image_tag photo_url(photo) %></div>
+  <h3 class="image__title"><%= photo.title %></h3>
+</div>
